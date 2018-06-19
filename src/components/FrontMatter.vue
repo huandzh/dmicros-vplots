@@ -1,8 +1,8 @@
 <template>
   <div class="frontmatter">
     <h1>{{ msg }}</h1>
-    <h2>Introduction</h2>
     <p>This app demonstrates plots in dmicros services.</p>
+    <h2>Plots</h2>
   </div>
 </template>
 
