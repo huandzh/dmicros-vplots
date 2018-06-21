@@ -1,7 +1,5 @@
-import { makeConsumerClustedOption } from './consumerSegment'
-import { makeRoseOption } from './roseSimple'
+import { ConsumerSegmentPlot } from './consumerSegment'
 
 export default {
-  consumerClusted: makeConsumerClustedOption,
-  roseSimple: makeRoseOption
+  ConsumerSegmentPlot: ConsumerSegmentPlot
 }

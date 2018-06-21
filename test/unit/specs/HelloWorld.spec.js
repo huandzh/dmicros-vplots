@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import HelloWorld from '@/components/HelloWorld'
+// import Vue from 'vue'
+/* import HelloWorld from '@/components/HelloWorld'
 
 describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {
@@ -9,3 +9,4 @@ describe('HelloWorld.vue', () => {
       .to.equal('Welcome to Your Vue.js App')
   })
 })
+*/

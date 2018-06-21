@@ -1,0 +1,255 @@
+{
+  "bolder": {
+    "input": [
+      [
+        0.0,
+        0.0],
+      2,
+      3,
+      10,
+      3,
+      "#fff"],
+    "result": [
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 0,
+          "y1": 15,
+          "x2": 10,
+          "y2": 15,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 0,
+          "y1": 12,
+          "x2": 6,
+          "y2": 12,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 0,
+          "y1": 9,
+          "x2": 4,
+          "y2": 9,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 6,
+          "y1": 9,
+          "x2": 10,
+          "y2": 9,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 0,
+          "y1": 6,
+          "x2": 2,
+          "y2": 6,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 4,
+          "y1": 6,
+          "x2": 8,
+          "y2": 6,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 2,
+          "y1": 3,
+          "x2": 4,
+          "y2": 3,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 8,
+          "y1": 3,
+          "x2": 10,
+          "y2": 3,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 0,
+          "y1": 0,
+          "x2": 10,
+          "y2": 0,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 0,
+          "y1": 15,
+          "x2": 0,
+          "y2": 0,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 2,
+          "y1": 6,
+          "x2": 2,
+          "y2": 3,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 4,
+          "y1": 12,
+          "x2": 4,
+          "y2": 0,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 6,
+          "y1": 15,
+          "x2": 6,
+          "y2": 0,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 8,
+          "y1": 15,
+          "x2": 8,
+          "y2": 9,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 8,
+          "y1": 6,
+          "x2": 8,
+          "y2": 3,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      },
+      {
+        "type": "line",
+        "zlevel": 10,
+        "shape": {
+          "x1": 10,
+          "y1": 15,
+          "x2": 10,
+          "y2": 0,
+          "percent": 1
+        },
+        "style": {
+          "lineWidth": 3,
+          "stroke": "#fff"
+        }
+      }
+    ]
+  }
+}
