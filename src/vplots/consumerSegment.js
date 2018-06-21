@@ -80,7 +80,7 @@ const DefaultVisualMapColor = ['#2971b2', '#6badd1', '#c2deec', '#f8f7f7', '#fbc
  * @param {Number} stepWidth - Width of one step.
  * @param {Number} stepHeight - Height of one step.
  * @param {Number} zlevel - Zlevel of the bolder.
- * @param {Number} lineWidth - Width of lines of thebolder.
+ * @param {Number} lineWidth - Width of lines of the bolder.
  * @param {String} stroke - Color of lines of the bolder.
  */
 export const Bolder = function (position, stepWidth, stepHeight, zlevel, lineWidth, stroke) {
@@ -91,7 +91,7 @@ export const Bolder = function (position, stepWidth, stepHeight, zlevel, lineWid
   this.lineWidth = lineWidth
   this.stroke = stroke
 }
-// use data at `layouts`
+// use data at `DefaultLayouts`
 Bolder.prototype.lines = DefaultLayouts.bolder
 /**
  * Generate template for lines of the bolder.
@@ -172,7 +172,9 @@ const fillData = function (key, map, template, extraKey) {
  *
  * @param {Object} response - The response from dimicros vdatas.
  */
-export const ConsumerSegmentPlot = function (layouts = DefaultLayouts, visualMapColor = DefaultVisualMapColor) {
+export const ConsumerSegment = function (layouts = DefaultLayouts, visualMapColor = DefaultVisualMapColor) {
+  this.vtype = 'ConsumerSegment'
+  this.vversion = '0.0.1'
   this.layouts = layouts
   this.visualMapColor = visualMapColor
 }
@@ -186,7 +188,7 @@ export const ConsumerSegmentPlot = function (layouts = DefaultLayouts, visualMap
  *
  * @return {Object} option - Option ready for echarts.
  */
-ConsumerSegmentPlot.prototype.genOptionHelper = function (data, cache, layouts, visualMapColor) {
+ConsumerSegment.prototype.genOptionHelper = function (data, cache, layouts, visualMapColor) {
   // dataJson is in `.data`
   // var dataJson = response.data.data
   // whether use cache
@@ -311,8 +313,8 @@ ConsumerSegmentPlot.prototype.genOptionHelper = function (data, cache, layouts, 
       visualMap: [
         // for plain heatmap
         {
-          min: heatmapCached.min || data.extra.min,
-          max: heatmapCached.max || data.extra.max,
+          min: heatmapCached.min || data.min,
+          max: heatmapCached.max || data.max,
           calculable: true,
           realtime: false,
           // set to value [x, y, value] -> value
@@ -327,8 +329,8 @@ ConsumerSegmentPlot.prototype.genOptionHelper = function (data, cache, layouts, 
         },
         // for heatmap
         {
-          min: heatmapCached.min || data.extra.min,
-          max: heatmapCached.max || data.extra.max,
+          min: heatmapCached.min || data.min,
+          max: heatmapCached.max || data.max,
           calculable: true,
           realtime: false,
           // set to value [x, y, value] -> value
@@ -437,7 +439,7 @@ ConsumerSegmentPlot.prototype.genOptionHelper = function (data, cache, layouts, 
               return [
                 '{' + params.value[3] + '}',
                 '{份额:' + (params.value[2] * 100).toFixed(1) + '%}' +
-                                differClass + '差异:' + differPrefix + (params.value[4] * 100).toFixed(1) + '%}'
+                differClass + '差异:' + differPrefix + (params.value[4] * 100).toFixed(1) + '%}'
               ].join('\n')
             },
             color: '#000',
@@ -457,11 +459,12 @@ ConsumerSegmentPlot.prototype.genOptionHelper = function (data, cache, layouts, 
  *
  * @return {Object} option - Option ready for echarts.
  */
-ConsumerSegmentPlot.prototype.genOption = function (response) {
-  return this.genOptionHelper(response.data.data,
+ConsumerSegment.prototype.genOption = function (response) {
+  const option = this.genOptionHelper(response.data.data,
     response.data.cache,
     this.layouts,
     this.visualMapColor)
+  return option
 }
 /**
  * Update bolder.
@@ -503,7 +506,7 @@ const updateBolder = function (chart, zlevel = 10, lineWidth = 3, stroke = '#fff
  *
  * @param {Object} chart - Echart instance.
  */
-ConsumerSegmentPlot.prototype.addBackmatter = function (chart) {
+ConsumerSegment.prototype.addBackmatter = function (chart) {
   updateBolder(chart)
   window.addEventListener('resize', function () {
     updateBolder(chart)

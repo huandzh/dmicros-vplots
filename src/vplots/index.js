@@ -1,5 +1,5 @@
-import { ConsumerSegmentPlot } from './consumerSegment'
+import { ConsumerSegment } from './consumerSegment'
 
 export default {
-  ConsumerSegmentPlot: ConsumerSegmentPlot
+  ConsumerSegment: ConsumerSegment
 }
