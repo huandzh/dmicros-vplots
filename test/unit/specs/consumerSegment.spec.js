@@ -1,5 +1,5 @@
 import {Bolder, ConsumerSegment} from '@/vplots/consumerSegment'
-const samples = require('./consumerSegment.sample.json')
+const samples = require('@/vplots/consumerSegment.sample.json')
 
 describe('consumerSegment.js::Bolder', () => {
   it('can generate bolder', () => {

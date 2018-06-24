@@ -1,5 +1,3 @@
-import { ConsumerSegment } from './consumerSegment'
+import { ConsumerSegment as ConsumerSegmentPlot } from './consumerSegment'
 
-export default {
-  ConsumerSegment: ConsumerSegment
-}
+export {ConsumerSegmentPlot}

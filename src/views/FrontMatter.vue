@@ -1,8 +1,8 @@
 <template>
   <div class="frontmatter">
-    <h1>{{ msg }}</h1>
     <p>This app demonstrates plots in dmicros services.</p>
     <h2>Plots</h2>
+    <router-link v-for="plot in plots" :to="plot" :key="plot">{{plot}}</router-link>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   name: 'FrontMatter',
   data () {
     return {
-      msg: 'Welcome dmicros-vplots App.'
+      plots: ['ConsumerSegment']
     }
   }
 }
