@@ -28,9 +28,6 @@ module.exports = function karmaConfig (config) {
         { type: 'lcov', subdir: '.' },
         { type: 'text-summary' }
       ]
-    },
-    browserConsoleLogOptions: {
-      path: 'temp.log'
     }
   })
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="consumer-segment">
     <plot-header :desc="desc"></plot-header>
-    <div id="my_echart" class="echart"></div>
+    <div id="echart" class="echart"></div>
   </div>
 </template>
 
@@ -18,24 +18,29 @@ export default {
   },
   data () {
     return {
-      desc: 'The plot illustrates differences and shares of consumer segments. It\'s composed of heatmaps and scatter.'
+      desc: 'The plot illustrates differences and shares of consumer segments. It\'s composed of heatmaps and scatter.',
+      chart: {},
+      plot: {}
     }
   },
   mounted: function () {
     this.$nextTick(function () {
-      this.draw('my_echart')
+      this.draw('echart')
     })
+  },
+  beforeDestroy: function () {
+    this.plot.removeBackmatter()
   },
   methods: {
     draw: function (id) {
-      var myChart = echarts.init(document.getElementById(id))
+      this.chart = echarts.init(document.getElementById(id))
       const mockResponse = {
         data: samples.vdata.doc
       }
-      const plot = new ConsumerSegmentPlot()
-      const option = plot.genOption(mockResponse)
-      myChart.setOption(option)
-      plot.addBackmatter(myChart)
+      this.plot = new ConsumerSegmentPlot()
+      const option = this.plot.genOption(mockResponse)
+      this.chart.setOption(option)
+      this.plot.addBackmatter(this.chart)
     }
   }
 }
@@ -44,8 +49,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .echart {
-  height: 700px;
-  width: 700px;
+  height: 60vh;
+  width: 80vw;
   margin: 0 auto;
+  display: block;
 }
 </style>

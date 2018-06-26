@@ -177,6 +177,7 @@ export const ConsumerSegment = function (layouts = DefaultLayouts, visualMapColo
   this.vversion = '0.0.1'
   this.layouts = layouts
   this.visualMapColor = visualMapColor
+  this.handlers = {}
 }
 /**
  * Helper for options.
@@ -508,7 +509,16 @@ const updateBolder = function (chart, zlevel = 10, lineWidth = 3, stroke = '#fff
  */
 ConsumerSegment.prototype.addBackmatter = function (chart) {
   updateBolder(chart)
-  window.addEventListener('resize', function () {
+  // register handler
+  this.handlers.resize = () => {
+    chart.resize()
     updateBolder(chart)
-  })
+  }
+  window.addEventListener('resize', this.handlers.resize)
+}
+/**
+ * remove backmatter before destory.
+ */
+ConsumerSegment.prototype.removeBackmatter = function () {
+  window.removeEventListener('resize', this.handlers.resize)
 }
